@@ -1,0 +1,29 @@
+services:
+  backend:
+    image: ghcr.io/yk-tuturu/project-desmos-backend:latest
+    container_name: project-desmos-backend
+    restart: unless-stopped
+    networks:
+      - caddy
+    environment:
+      - PORT=3001
+    labels:
+      caddy: api-desmos.ykkoh.com
+      caddy.reverse_proxy: "{{upstreams 3001}}"
+
+  frontend:
+    image: ghcr.io/yk-tuturu/project-desmos-frontend:latest
+    container_name: project-desmos-frontend
+    restart: unless-stopped
+    networks:
+      - caddy
+    depends_on:
+      - backend
+    labels:
+      caddy: desmos.ykkoh.com
+      caddy.reverse_proxy: "{{upstreams 80}}"
+
+networks:
+  caddy:
+    external: true
+    name: caddy_shared_net
