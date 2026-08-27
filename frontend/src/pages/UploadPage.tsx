@@ -153,49 +153,13 @@ function UploadPage() {
 
       {/* Top Nav Bar */}
       <header className="fixed top-0 w-full z-50 shadow-sm bg-surface">
-        <div className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto h-16">
-          <div className="flex items-center gap-8">
-            <a
-              className="text-headline-md font-headline-md font-bold text-primary tracking-tight"
-              href="#"
-            >
-              Project Desmos
-            </a>
-            <nav className="hidden md:flex gap-6">
-              <a
-                className="text-on-surface-variant text-label-sm font-label-sm hover:text-primary transition-colors duration-200"
-                href="#"
-              >
-                How it Works
-              </a>
-              <a
-                className="text-on-surface-variant text-label-sm font-label-sm hover:text-primary transition-colors duration-200"
-                href="#"
-              >
-                Tutorials
-              </a>
-              <a
-                className="text-on-surface-variant text-label-sm font-label-sm hover:text-primary transition-colors duration-200"
-                href="#"
-              >
-                Pricing
-              </a>
-            </nav>
-          </div>
-          <div className="flex items-center gap-4">
-            <a
-              className="hidden md:block text-primary text-label-sm font-label-sm hover:text-primary-container transition-colors duration-200"
-              href="#"
-            >
-              Sign In
-            </a>
-            <a
-              className="bg-primary text-on-primary text-label-sm font-label-sm px-4 py-2 rounded-lg hover:bg-primary-container transition-colors duration-200 shadow-[0_4px_12px_rgba(59,130,246,0.2)]"
-              href="#"
-            >
-              Get Started
-            </a>
-          </div>
+        <div className="flex items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto h-16">
+          <a
+            className="text-headline-md font-headline-md font-bold text-primary tracking-tight"
+            href="#"
+          >
+            Project Desmos
+          </a>
         </div>
       </header>
 
@@ -379,46 +343,6 @@ function UploadPage() {
           </button>
         </div>
       </main>
-
-      {/* Footer */}
-      <footer className="w-full bg-surface-container-low border-t border-outline-variant mt-auto relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-8 max-w-container-max-width mx-auto gap-6 md:gap-0">
-          <div className="flex flex-col items-center md:items-start gap-2">
-            <span className="text-headline-md font-headline-md font-bold text-primary">
-              Project Desmos
-            </span>
-            <p className="text-body-md font-body-md text-on-surface-variant text-sm text-center md:text-left">
-              © 2026 Project Desmos. Precision math meets creative vision.
-            </p>
-          </div>
-          <div className="flex flex-wrap justify-center gap-6">
-            <a
-              className="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors hover:underline"
-              href="#"
-            >
-              Privacy Policy
-            </a>
-            <a
-              className="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors hover:underline"
-              href="#"
-            >
-              Terms of Service
-            </a>
-            <a
-              className="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors hover:underline"
-              href="#"
-            >
-              API Documentation
-            </a>
-            <a
-              className="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors hover:underline"
-              href="#"
-            >
-              Contact Support
-            </a>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }
